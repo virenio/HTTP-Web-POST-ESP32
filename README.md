@@ -8,6 +8,7 @@ Note:
 
 
 **index.php**
+
 Create this and save this file in your website or localserver peblic.html folder.
 
 the file is accessed from ESP32 requesting data . 
