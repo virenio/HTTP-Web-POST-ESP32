@@ -13,6 +13,7 @@ const char* ssid  = "xxxxxxxx";  //Introduce your network SSID
 const char* password  = "xxxxxxxx"; //Introduce your network password
  
 //-------------------------------------------------------
+// Comment or Uncomment as required
   const char* serverName = "http://xxx.xxx.xxx.xxx/index.php"; //your local host
 //const char* serverName = "http://yourWebSite.com/index.php "; // your web site
 bool toggle_pressed = false;           
@@ -52,22 +53,22 @@ Serial.println("Title: WEB > POST > ESP ");
  
                 //Check WiFi connection status  
       HTTPClient http;                                  //Create new client      
-        data_to_send = "getData"  ;    //send for data post
+        data_to_send = "getData"  ;                     //send for data post
              
       //Begin new connection to website       
-      http.begin(client,serverName);   //Indicate the destination webpage 
+      http.begin(client,serverName);       //Indicate the destination webpage 
       http.addHeader("Content-Type", "application/x-www-form-urlencoded");  //  header
       
-      int response_code = http.POST(data_to_send);                        //  POST. 
+      int response_code = http.POST(data_to_send);                          //  POST. 
       
       //If the code is higher than 0, it means we received a response
       if(response_code > 0){
         Serial.println("------------Start of Post------------------------"); 
-        Serial.println("HTTP code " + String(response_code));            //  return code
+        Serial.println("HTTP code " + String(response_code));             //  return code
   
         if(response_code == 200){                                         //  read the echo data
-          String response_body = http.getString();                                // 
-          Serial.print("Server reply: ");                                  //Print data  
+          String response_body = http.getString();                        // 
+          Serial.print("Server reply: ");                                 //Print data  
           Serial.println(response_body);
 
           Serial.println("------------------End of Post-------------------"); 
@@ -79,7 +80,7 @@ Serial.println("Title: WEB > POST > ESP ");
        Serial.print("Error sending POST, code: ");
        Serial.println(response_code);
       }
-      http.end();                                                                 //End the connection
+      http.end();                                                           //End the connection
       digitalWrite(LED_BUILTIN, LOW);      
 }
 void loop(){
