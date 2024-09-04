@@ -9,6 +9,14 @@ Note:
 
 **index.php**
 Create this and save this file in your website or localserver peblic.html folder.
+
 the file is accessed from ESP32 requesting data . 
+
 The index.php  file will access data from the database and send back data to ESP32 
+
+**dbSql**
+
+Create a table in a database on youe APache server orr server host server.
+
+Scale the number of values as required.
 
