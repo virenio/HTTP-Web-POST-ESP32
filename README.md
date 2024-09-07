@@ -15,6 +15,8 @@ the file is accessed from ESP32 requesting data .
 
 The index.php  file will access data from the database and send back data to ESP32 
 
+http://localhost/index.php
+
 **dbSql**
 
 Create a table in a database on youe APache server orr server host server.
